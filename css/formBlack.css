@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,300,400,500,900,900i&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #373B44;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4286f4, #373B44);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+div {
+    text-align: center;
+    width: 100%;
+
+}
+
+.titulo {
+    text-align: center;
+    font-weight: 300;
+    font-size: xx-large;
+}
+
+.contenedor {
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    display: block;
+    background-color: #f7f7f7;
+    width: 300px;
+    height: auto;
+    padding: 10px;
+}
+
+.campos {
+    margin-top: 20px;
+}
+
+.campos label {
+    color: #373B44;
+}
+
+.campos input {
+    margin-top: 10px;
+}
+
+.boton {
+    background: #4286f4;
+    color: #f7f7f7;
+    font-weight: 500;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin:20px 25% 10px 25%;
+}
+.boton:hover{
+    background: #236fe9;
+}
