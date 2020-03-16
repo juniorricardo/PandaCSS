@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
     <!-- <link href="css/styles.css" rel="stylesheet"> -->
+    <script src="js/busqueda.js"></script>
 
     <style>
         html{
@@ -83,24 +84,30 @@ background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, F
                         </div>
                     </div>
             
-                    <div class="uk-margin">
-                        <select class="uk-select">
-                            <option>Option 01</option>
-                            <option>Option 02</option>
-                        </select>
+                    <div class="uk-margin uk-grid-small">
+                        <label class="uk-form-label" for="form-stacked-select">Seleccione licencia</label>
+                        <div class="uk-form-controls">
+                            <div class="uk-grid-small" uk-grid>
+                                <div class="uk-width-1-1@s">
+                                    <select class="uk-select" id="form-dropdown-licencia" onchange="select(id);">
+                                        <option value="1">Option 01</option>
+                                        <option value="2">Option 02</option>
+                                        <option value="3">Option 03</option>
+                                    </select>
+                                </div>
+                                <div class="uk-width-1-2@s">
+                                    <div class="uk-margin">
+                                        <input class="uk-input uk-form-blank uk-form-width-medium" type="text" placeholder="Dias:" disabled>
+                                    </div>
+                                </div>
+                                <div class="uk-width-1-2@s">
+                                    <div class="uk-margin">
+                                        <label class="uk-input uk-form-width-medium" id="diasCorrespondientesID" > 0 </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <!-- <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                        <label><input class="uk-radio" type="radio" name="radio2" checked> A</label>
-                        <label><input class="uk-radio" type="radio" name="radio2"> B</label>
-                    </div>           
-                    <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                        <label><input class="uk-checkbox" type="checkbox" checked> A</label>
-                        <label><input class="uk-checkbox" type="checkbox"> B</label>
-                    </div> 
-                    <div class="uk-margin">
-                        <input class="uk-range" type="range" value="2" min="0" max="10" step="0.1">
-                    </div> -->
                     <a class="uk-button uk-button-primary uk-width-1-1"href="">Enviar</a>
                 </fieldset>
             </form>
@@ -108,6 +115,14 @@ background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, F
         </div>
     
     </div>
+
+    <script>
+        function select(a){
+            var id = document.getElementById(a);            
+            var value = id.options[id.selectedIndex].value;
+            document.getElementById('diasCorrespondientesID').innerHTML = value;
+        }
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js"
         integrity="sha256-v789mr/zBbgR53mfydCI78CSAF+9+nRqu+JRfs1UPg0=" crossorigin="anonymous"></script>
